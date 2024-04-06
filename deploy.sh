@@ -1,19 +1,16 @@
 #!/bin/bash
-set -e
 
+docker login -u $Username -p Password
 
-DOCKER_USERNAME="vennila1011"
-IMAGE_NAME="myimage"
-TAG="latest"
-
-
-docker build -t $DOCKER_USERNAME/$IMAGE_NAME:$TAG .
-
-docker login
-
-docker push $DOCKER_USERNAME/dev/$IMAGE_NAME:$TAG
-
-echo "Image $DOCKER_USERNAME/$IMAGE_NAME:$TAG has been pushed to Docker Hub!"
+if [GIT_BRANCH == "origin/dev"]; then
+docker tag
+docker push vennila1011/dev:latest
+elif [GIT_BRANCH == "origin/master"]; then
+docker tag
+docker push vennila1011/prod:latest
+else 
+echo"Image is not pushed"
+fi
 
 
 
