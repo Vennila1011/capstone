@@ -3,24 +3,16 @@
 docker login -u vennila1995 -p dckr_pat_AjZmebMzfg0Ghh3nl9Hjn0zoB0E
 GIT_BRANCH=$(git rev-parse --abbrev-ref HEAD)
 
-# Print the branch name (for debugging)
-echo "Current branch: $GIT_BRANCH"
-
-echo $GIT_BRANCH
 if [ "$GIT_BRANCH" == "dev" ]; then
-<<<<<<< HEAD
         echo "In Dev branch"
 docker tag myimage vennila1995/dev
 docker push vennila1995/dev
 elif [ "$GIT_BRANCH" == "master" ]; then
-        echo "In Master branch"
-=======
-	echo "In Dev branch"
+	echo "In Prod Branch"
 docker tag myimage vennila1995/dev
 docker push vennila1995/dev
 elif [ "$GIT_BRANCH" == "master" ]; then
 	echo "In Master branch"
->>>>>>> 4e64af5 (Modified Deploy.sh files)
 docker tag myimage vennila1995/prod
 docker push vennila1995/prod
 else
