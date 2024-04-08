@@ -1,15 +1,22 @@
 #!/bin/bash
 
-docker login -u $Username -p Password
+docker login -u vennila1995 -p dckr_pat_AjZmebMzfg0Ghh3nl9Hjn0zoB0E
+GIT_BRANCH=$(git rev-parse --abbrev-ref HEAD)
 
-if [GIT_BRANCH == "origin/dev"]; then
-docker tag
-docker push vennila1011/dev:latest
-elif [GIT_BRANCH == "origin/master"]; then
-docker tag
-docker push vennila1011/prod:latest
-else 
-echo"Image is not pushed in DockerHub"
+# Print the branch name (for debugging)
+echo "Current branch: $GIT_BRANCH"
+
+echo $GIT_BRANCH
+if [ "$GIT_BRANCH" == "dev" ]; then
+        echo "In Dev branch"
+docker tag myimage vennila1995/dev
+docker push vennila1995/dev
+elif [ "$GIT_BRANCH" == "master" ]; then
+        echo "In Master branch"
+docker tag myimage vennila1995/prod
+docker push vennila1995/prod
+else
+echo "Image is not pushed in DockerHub."
 fi
 
 
