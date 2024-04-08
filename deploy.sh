@@ -9,10 +9,6 @@ docker tag myimage vennila1995/dev
 docker push vennila1995/dev
 elif [ "$GIT_BRANCH" == "master" ]; then
 	echo "In Prod Branch"
-docker tag myimage vennila1995/dev
-docker push vennila1995/dev
-elif [ "$GIT_BRANCH" == "master" ]; then
-	echo "In Master branch"
 docker tag myimage vennila1995/prod
 docker push vennila1995/prod
 else
