@@ -9,7 +9,7 @@ elif [ "$GIT_BRANCH" == "origin/master" ]; then
 docker tag myimage vennila1011/myimage:prod
 docker push vennila1011/prod
 else 
-echo "Image is not pushed in DockerHub"
+echo "Image is not pushed in DockerHub."
 fi
 
 
