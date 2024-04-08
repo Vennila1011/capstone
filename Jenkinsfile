@@ -10,8 +10,8 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-		sh 'docker stop mycontainer || true' 
-                sh 'docker rm mycontainer || true'
+		sh 'docker stop mycontainer1 || true' 
+                sh 'docker rm mycontainer1 || true'
                 sh './deploy.sh' 
                 echo 'Deployed successfully'
             }
