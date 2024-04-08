@@ -5,7 +5,7 @@ pipeline {
         stage('Build') {
             steps {
                 sh './build.sh' 
-                echo 'Build is successful'
+                echo 'Built the iamge successfully'
             }
         }
         stage('Deploy') {
