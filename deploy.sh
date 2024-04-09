@@ -1,5 +1,5 @@
 #!/bin/bash
-
+docker-compose up -d
 # Docker login
 
 docker login -u vennila1995 -p dckr_pat_AjZmebMzfg0Ghh3nl9Hjn0zoB0E
