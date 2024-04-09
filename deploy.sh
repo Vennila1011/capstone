@@ -4,6 +4,9 @@
 
 docker login -u vennila1995 -p dckr_pat_AjZmebMzfg0Ghh3nl9Hjn0zoB0E
 
+# Get the Git branch name
+GIT_BRANCH=$(git rev-parse --abbrev-ref HEAD)
+
 # Check the Git branch
 
 if [[ $GIT_BRANCH == "dev" ]]; then
