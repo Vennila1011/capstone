@@ -1,12 +1,16 @@
 #!/bin/bash
 
+# Docker login
+
 docker login -u vennila1995 -p dckr_pat_AjZmebMzfg0Ghh3nl9Hjn0zoB0E
+
+# Check the Git branch
 
 if [[ $GIT_BRANCH == "dev" ]]; then
         echo "In Dev branch"
 docker tag myimage vennila1995/dev
 docker push vennila1995/dev
-elif [[ $GIT_BRANCH == "origin/master" ]]; then
+elif [[ $GIT_BRANCH == "master" ]]; then
 	echo "In Prod Branch"
 docker tag myimage vennila1995/prod
 docker push vennila1995/prod
