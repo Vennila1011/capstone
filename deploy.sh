@@ -3,7 +3,7 @@
 # Docker login
 
 docker login -u vennila1995 -p dckr_pat_AjZmebMzfg0Ghh3nl9Hjn0zoB0E
-GIT_BRANCH=$(git rev-parse --abbrev-ref HEAD)
+
 echo "Current Git branch: $GIT_BRANCH"
 # Check the Git branch
 
