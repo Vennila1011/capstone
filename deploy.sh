@@ -16,5 +16,5 @@ elif [[ $GIT_BRANCH == "origin/master" ]]; then
 docker tag my_reactapp_image vennila1995/prod
 docker push vennila1995/prod
 else
-echo "Image is not pushed in DockerHub."
+echo "Image is not pushed in DockerHub"
 fi
