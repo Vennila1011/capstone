@@ -2,7 +2,7 @@
 
 docker login -u vennila1995 -p dckr_pat_AjZmebMzfg0Ghh3nl9Hjn0zoB0E
 
-if [ "$GIT_BRANCH" == "dev" ]; then
+if [[ $GIT_BRANCH == "dev" ]]; then
         echo "In Dev branch"
 docker tag myimage vennila1995/dev
 docker push vennila1995/dev
